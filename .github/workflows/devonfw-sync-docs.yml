@@ -1,13 +1,12 @@
-name: Sync Docs 
-on:
+env:
+    REPO_CONSOLIDATE: "devonfw-guide"
+    BUILD_USER: ${{ secrets.BUILD_USER }}
+    BUILD_USER_PASSWD: ${{ secrets.BUILD_USER_PASSWD }}
+    BUILD_USER_EMAIL:  ${{ secrets.BUILD_USER_EMAIL }}
+on: 
   push:
-    paths:
-      - '**.asciidoc'
-      - '**.md'    
-      - '**.adoc'
-    branches:
-      - master
-  workflow_dispatch:
+    branches: [ master ]
+name: Sync Docs
 jobs:
     update-wiki:
         if: ${{github.repository == 'devonfw/devon4ts'}}
