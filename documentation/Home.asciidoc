@@ -1,0 +1,108 @@
+:toc: macro
+
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+toc::[]
+:idprefix:
+:idseparator: -
+:reproducible:
+:source-highlighter: rouge
+:listing-caption: Listing
+
+= devon4ts
+
+This guide describes an application architecture for web client development in https://angular.io/[Angular] with nx and NestJs backend.
+
+== Motivation
+
+Web Application development is a very difficult task since there are a lot of different frameworks, patterns and practices nowadays. For that reason, in devonfw we decided to make use of Nx since it is a full front-end framework that includes almost all the different patterns and features that any SPA may need and provides a well defined architecture to development, build and deploy. 
+
+
+== Contents
+
+=== General
+
+This section introduces concepts to help developers with the tooling and package managers.
+
+* link:guide-package-managers[Package Managers]
+* link:guide-npm-yarn-workflow[Package Managers Workflow]
+* link:guide-yarn-2-support[Yarn 2 Support]
+
+=== Angular
+
+This is the main section of the documentation, where the developer will find guidelines for accessibility, how to use the Angular toolchain, how to refactor components, create libraries and, in general, maintain Angular applications. But last and not least, developers will also find solutions to common problems many of the Angular projects may have. 
+
+==== Architecture
+* link:architecture[Architecture Overview]
+  
+This section introduces in an easy way the main principles and guidelines based on Angular Style Guide.
+
+* link:meta-architecture[Client Meta Architecture]
+
+The goal of this topic is to support the non-functional requirements for the client, i.e. mostly maintainability, scalability, efficiency and portability. As such it provides a component-oriented architecture following the same principles listed already in the devonfw architecture overview.
+
+* link:components-layer[Components Layer]
+* link:services-layer[Services Layer]
+
+==== NgRx
+
+State Management is a big topic in big front-end application. This section explains the fundamentals of the industry standard library NgRx, showing its main components.
+
+* link:guide-ngrx-getting-started[Introduction]
+* link:guide-ngrx-simple-store[State, Selection and Reducers]
+* link:guide-ngrx-effects[Side effects with NgRx/Effects]
+* link:guide-ngrx-entity[Simplifying CRUD with NgRx/Entity]
+
+==== Guides
+
+The Guides section aims to provide solutions to cross-topic challenges that at this moment do not fit in the previous sections. As the *Angular* section, some of the topics are demonstrated with a sample located in the `samples` folder.
+
+* link:cookbook-abstract-class-store[Abstract Class Store]
+* link:guide-add-electron[Angular Electron]
+* link:guide-angular-mock-service.asciidoc[Mock Service]
+* link:guide-cypress.asciidoc[Cypress e2e testing]
+* link:guide-eslint.asciidoc[Angular ESLint]
+
+NOTE: All the different topics are demonstrated in the `samples` folder with a small application. 
+
+* link:guide-accessibility[Accessibility]
+* link:guide-angular-elements[Angular Elements]
+* link:guide-angular-lazy-loading[Angular Lazy Loading]
+* link:guide-angular-library[Angular Library]
+* link:guide-angular-theming[Angular Material Theming]
+* link:guide-angular-pwa[Angular Progressive Web Apps]
+* link:guide-app-initializer[`App Initializer`]
+* link:guide-component-decomposition[Component Decomposition]
+* link:guide-consuming-rest-services[Consuming REST services]
+* link:guide-error-handler[Error Handler]
+* link:guide-file-structure[File Structure]
+* link:guide-internationalization[Internationalization]
+* link:guide-routing[Routing]
+* link:guide-testing[Testing]
+* link:guide-update-angular-cli[Update Angular CLI]
+* link:guide-upgrade-devon4ng[Upgrade devon4ng applications]
+* link:guide-working-with-angular-cli[Working with Angular CLI]
+* link:guide-layout-with-angular-material[Angular Material Layout]
+
+=== Ionic
+
+As part of the devon4ng stack, we include a small section to explain how to develop hybrid mobile Ionic/Angular applications and create `PWAs` with this UI library. As the previous section, the contents are demonstrated in the `samples` folder. 
+
+* link:guide-ionic-getting-started[Ionic Getting started]
+* link:guide-ionic-from-code-to-android[Ionic to Android]
+* link:guide-ionic-pwa[Ionic Progressive Web Apps]
+
+=== Nx
+We have included a small section to explain how we can get started with the Nx CLI in an Angular Application.
+
+* link:guide-creating-angular-app-with-nx-cli[Starting with Nx CLI in Angular]
+
+=== NestJS backend:
+In this section we have explained backend with NestJS framework. The goal is to provide the knowledge of architecture of this framework and the demonstration of step by step application samples.
+
